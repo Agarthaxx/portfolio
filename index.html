@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var sys = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved || sys;
+      } catch (e) { }
+    })();
+  </script>
+
+  <title>Arthur Lanllier — Développeur Full-Stack</title>
+  <meta name="description"
+    content="Arthur Lanllier, développeur full-stack à Caen. En alternance chez XEFI. Front React / TypeScript, back Django / Python." />
+  <meta name="author" content="Arthur Lanllier" />
+  <meta name="theme-color" content="#f2eee4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#12110d" media="(prefers-color-scheme: dark)" />
+  <link rel="canonical" href="https://agarthaxx.github.io/BTS-SIO-PORTFOLIO-E5/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Arthur Lanllier" />
+  <meta property="og:title" content="Arthur Lanllier — Développeur Full-Stack" />
+  <meta property="og:description"
+    content="Développeur full-stack à Caen, en alternance chez XEFI. React · TypeScript · Django · Python." />
+  <meta property="og:url" content="https://agarthaxx.github.io/BTS-SIO-PORTFOLIO-E5/" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:image" content="https://agarthaxx.github.io/BTS-SIO-PORTFOLIO-E5/img/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f2eee4'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' fill='%23e8402a' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arthur Lanllier",
+    "jobTitle": "Développeur Full-Stack",
+    "url": "https://agarthaxx.github.io/BTS-SIO-PORTFOLIO-E5/",
+    "email": "lanllierarthur@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Caen", "postalCode": "14000", "addressCountry": "FR" },
+    "worksFor": { "@type": "Organization", "name": "XEFI" },
+    "alumniOf": { "@type": "EducationalOrganization", "name": "AFTEC Caen — BTS SIO option SLAM" },
+    "knowsAbout": ["React", "TypeScript", "Django", "Python", "MariaDB", "Docker", "API REST"],
+    "sameAs": ["https://www.linkedin.com/in/arthur-lanllier-2b9389222/", "https://github.com/Agarthaxx"]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- MASTHEAD -->
+  <header class="mast" id="mast">
+    <div class="wrap mast-in">
+      <a href="#top" class="mast-brand">Arthur&nbsp;Lanllier<span class="mast-star">✳</span></a>
+      <nav class="mast-nav" aria-label="Navigation principale">
+        <a href="#about">À&nbsp;propos</a>
+        <a href="#stack">Stack</a>
+        <a href="#work">Parcours</a>
+        <a href="#projects">Projets</a>
+      </nav>
+      <div class="mast-right">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer de thème"
+          title="Changer de thème">
+          <svg class="ic-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.2" />
+            <path
+              d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6" />
+          </svg>
+          <svg class="ic-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 14.5A8 8 0 1 1 9.5 4a6.3 6.3 0 0 0 10.5 10.5Z" />
+          </svg>
+        </button>
+        <a href="https://github.com/Agarthaxx" target="_blank" rel="noopener" class="mast-ic" aria-label="Mon GitHub">
+          <svg width="17" height="17" viewBox="0 0 18 18" fill="currentColor">
+            <path
+              d="M9 1C4.58 1 1 4.58 1 9c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0 0 17 9c0-4.42-3.58-8-8-8Z" />
+          </svg>
+        </a>
+        <a href="#contact" class="mast-contact">Contact</a>
+        <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+          aria-controls="mobileMenu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-links" aria-label="Navigation mobile">
+      <a href="#about"><span class="mm-n">01</span>À propos</a>
+      <a href="#stack"><span class="mm-n">02</span>Stack</a>
+      <a href="#work"><span class="mm-n">03</span>Parcours</a>
+      <a href="#projects"><span class="mm-n">04</span>Projets</a>
+      <a href="#contact"><span class="mm-n">05</span>Contact</a>
+    </nav>
+    <a href="folder/Cv.pdf" target="_blank" rel="noopener" class="ln mobile-cv">Télécharger le CV ↓</a>
+  </div>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-meta mono reveal">
+          <span>Développeur full-stack</span>
+          <span class="hm-mid">Front &amp; Back</span>
+          <span>Caen · France · 2026</span>
+        </div>
+
+        <h1 class="hero-name reveal">Arthur<br /><span class="sur">Lanllier<span class="sur-mark">.</span></span></h1>
+
+        <dl class="byline reveal">
+          <div>
+            <dt class="mono">Rôle</dt>
+            <dd>Développeur full-stack</dd>
+          </div>
+          <div>
+            <dt class="mono">Entreprise</dt>
+            <dd>XEFI · alternance</dd>
+          </div>
+          <div>
+            <dt class="mono">Statut</dt>
+            <dd><span class="live-dot" aria-hidden="true"></span>Disponible pour échanger</dd>
+          </div>
+        </dl>
+
+        <p class="hero-lede reveal">
+          Développeur full-stack en alternance chez XEFI, à Caen. J'interviens sur toute
+          la chaîne : des interfaces en <em>React / TypeScript</em> aux APIs en <em>Django / Python</em>.
+        </p>
+
+        <div class="hero-links reveal">
+          <a href="#contact" class="ln ln-fill">Me contacter <span class="ln-i">→</span></a>
+          <a href="#projects" class="ln">Projets <span class="ln-i">↓</span></a>
+          <a href="https://github.com/Agarthaxx" target="_blank" rel="noopener" class="ln">GitHub <span
+              class="ln-i">↗</span></a>
+          <a href="folder/Cv.pdf" target="_blank" rel="noopener" class="ln">CV <span class="ln-i">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="sec" id="about">
+      <div class="wrap sec-grid">
+        <aside class="sec-aside">
+          <span class="sec-num">(01)</span>
+          <span class="sec-name mono">À propos</span>
+        </aside>
+        <div class="sec-main">
+          <figure class="portrait reveal">
+            <img src="img/arthur.jpg" alt="Portrait d'Arthur Lanllier" loading="lazy"
+              onerror="this.closest('.portrait').classList.add('no-img')" />
+            <span class="portrait-ph">
+              <span class="ph-mark" aria-hidden="true">AL</span>
+              <span class="ph-note mono">Photo de profil à venir prochainement.</span>
+            </span>
+            <figcaption class="mono">Arthur Lanllier — Caen</figcaption>
+          </figure>
+          <h2 class="statement reveal">D'un parcours littéraire<br />au développement web.</h2>
+          <div class="prose">
+            <p class="reveal">
+              Mon parcours n'a rien de linéaire : j'ai d'abord suivi une voie littéraire avant de
+              me tourner vers le développement. Ce qui m'a convaincu, c'est la logique, la rigueur
+              et la satisfaction concrète de livrer quelque chose qui fonctionne. Ce rapport au
+              langage me sert aujourd'hui à écrire un code lisible et à nommer les choses avec soin.
+            </p>
+            <p class="reveal">
+              Depuis septembre 2025, je suis développeur full-stack en alternance chez
+              <strong>XEFI</strong>, une ESN normande. J'y travaille sur des projets web concrets :
+              interfaces React / TypeScript, APIs Django / Python et bases de données. Je suis
+              junior et je l'assume pleinement. Je progresse vite, je pose des questions, et je
+              cherche à comprendre le « pourquoi » derrière chaque choix technique.
+            </p>
+          </div>
+          <dl class="specs reveal">
+            <div>
+              <dt class="mono">Localisation</dt>
+              <dd>Caen (14), France</dd>
+            </div>
+            <div>
+              <dt class="mono">Poste actuel</dt>
+              <dd>Développeur full-stack en alternance XEFI</dd>
+            </div>
+            <div>
+              <dt class="mono">Formation</dt>
+              <dd>BTS SIO · option SLAM AFTEC Caen</dd>
+            </div>
+            <div>
+              <dt class="mono">Recherche</dt>
+              <dd>Alternance, stage &amp; collaborations</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="sec" id="stack">
+      <div class="wrap sec-grid">
+        <aside class="sec-aside">
+          <span class="sec-num">(02)</span>
+          <span class="sec-name mono">Ma stack</span>
+        </aside>
+        <div class="sec-main">
+          <h2 class="statement reveal">Les technologies<br />avec lesquelles je travaille.</h2>
+          <dl class="stack-dl">
+            <div class="stack-row reveal">
+              <dt class="mono">Au quotidien<span class="st-hint">utilisées en projet</span></dt>
+              <dd>Python&nbsp;· Django&nbsp;· React&nbsp;Native&nbsp;· Expo&nbsp;· HTML/CSS&nbsp;· MariaDB&nbsp;·</dd>
+            </div>
+            <div class="stack-row reveal">
+              <dt class="mono">En apprentissage<span class="st-hint">montée en compétences en cours</span></dt>
+              <dd class="soft">Docker&nbsp;· CI/CD&nbsp;· SQL&nbsp;avancé&nbsp;· MariaDB&nbsp;</dd>
+            </div>
+            <div class="stack-row reveal">
+              <dt class="mono">Outils</dt>
+              <dd class="soft">Terminal&nbsp;· Ghostty&nbsp;· Git&nbsp;· Docker&nbsp;· Linux&nbsp;</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section class="sec" id="work">
+      <div class="wrap sec-grid">
+        <aside class="sec-aside">
+          <span class="sec-num">(03)</span>
+          <span class="sec-name mono">Parcours</span>
+        </aside>
+        <div class="sec-main">
+          <h2 class="statement reveal">Un parcours,<br />quelques étapes clés.</h2>
+          <ol class="cv">
+            <li class="cv-row reveal is-now">
+              <span class="cv-year mono">2025 —</span>
+              <div class="cv-body">
+                <h3 class="cv-role">Développeur full-stack, alternance <span class="cv-at">XEFI</span> <span
+                    class="cv-now mono">● en poste</span></h3>
+                <p>Contrat d'apprentissage obtenu à l'issue de mon stage. Conception et développement,
+                  sur des projets réels en équipe, d'un outil interne s'appuyant sur Expo, React/TypeScript
+                  et des API's Django REST.
+                </p>
+              </div>
+            </li>
+            <li class="cv-row reveal">
+              <span class="cv-year mono">2025</span>
+              <div class="cv-body">
+                <h3 class="cv-role">Stage développeur <span class="cv-at">XEFI</span></h3>
+                <p>Première expérience professionnelle : Début de modélisation pour une application de gestion
+                  client, de la conception jusqu'à la mise en production.</p>
+              </div>
+            </li>
+            <li class="cv-row reveal">
+              <span class="cv-year mono">2024 — 26</span>
+              <div class="cv-body">
+                <h3 class="cv-role">BTS SIO · option SLAM <span class="cv-at">AFTEC Caen</span></h3>
+                <p>Formation au développement d'applications : conception logicielle, bases de
+                  données, algorithmique et notions de réseau. Réalisée en alternance.</p>
+              </div>
+            </li>
+            <li class="cv-row reveal">
+              <span class="cv-year mono">2019</span>
+              <div class="cv-body">
+                <h3 class="cv-role">Baccalauréat littéraire</h3>
+                <p>Langues et littérature — le socle de rigueur et d'expression qui nourrit
+                  aujourd'hui ma manière d'aborder le code.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="sec" id="projects">
+      <div class="wrap sec-grid">
+        <aside class="sec-aside">
+          <span class="sec-num">(04)</span>
+          <span class="sec-name mono">Projets</span>
+        </aside>
+        <div class="sec-main">
+          <h2 class="statement reveal">Quelques trucs<br />que j'ai construits.</h2>
+
+          <ol class="index">
+            <li class="reveal">
+              <a class="idx" href="https://github.com/PokeCard-Masters/pokecard_masters" target="_blank" rel="noopener">
+                <span class="idx-num mono">01</span>
+                <div class="idx-main">
+                  <h3 class="idx-title">PokéCard Masters</h3>
+                  <p class="idx-desc">Application mobile de jeu de cartes développée en équipe avec
+                    React Native et Expo. J'ai contribué à l'interface mobile ainsi qu'à une partie
+                    de l'API — mon projet le plus abouti en travail collaboratif (Git, gestion
+                    d'état, intégration front / back).</p>
+                  <span class="idx-tags mono">Expo · React Native · TypeScript</span>
+                </div>
+                <span class="idx-thumb is-fit"><img src="img/pokecard-masters.png" alt="PokéCard Masters"
+                    loading="lazy" /></span>
+                <span class="idx-cta mono">GitHub <span class="ln-i">↗</span></span>
+              </a>
+            </li>
+            <li class="reveal">
+              <a class="idx" href="https://github.com/PokeCard-Masters/pokecard_masters" target="_blank" rel="noopener">
+                <span class="idx-num mono">02</span>
+                <div class="idx-main">
+                  <h3 class="idx-title">API — PokéCard Masters</h3>
+                  <p class="idx-desc">Backend du jeu : API REST développée avec Django REST Framework,
+                    authentification JWT, base de données MariaDB et documentation Swagger.
+                    Une architecture claire, testée et documentée.</p>
+                  <span class="idx-tags mono">Django · Python · MariaDB</span>
+                </div>
+                <span class="idx-thumb"><img src="img/django-ninja.png" alt="Django REST API" loading="lazy" /></span>
+                <span class="idx-cta mono">GitHub <span class="ln-i">↗</span></span>
+              </a>
+            </li>
+            <li class="reveal">
+              <a class="idx" href="https://deft-empanada-cecc4a.netlify.app/" target="_blank" rel="noopener">
+                <span class="idx-num mono">03</span>
+                <div class="idx-main">
+                  <h3 class="idx-title">Portfolio Robbie Lens</h3>
+                  <p class="idx-desc">Site vitrine pour une photographe, développé en HTML et CSS sans
+                    framework. Mise en page soignée, design responsive et animations légères pour
+                    mettre en valeur le travail présenté.</p>
+                  <span class="idx-tags mono">HTML · CSS · Responsive</span>
+                </div>
+                <span class="idx-thumb"><img src="img/robbie-lens.png" alt="Portfolio Robbie Lens"
+                    loading="lazy" /></span>
+                <span class="idx-cta mono">Le site <span class="ln-i">↗</span></span>
+              </a>
+            </li>
+            <li class="reveal">
+              <a class="idx" href="https://github.com/Agarthaxx/IPT_project" target="_blank" rel="noopener">
+                <span class="idx-num mono">04</span>
+                <div class="idx-main">
+                  <h3 class="idx-title">Atelier CRM</h3>
+                  <p class="idx-desc">Outil de gestion d'atelier de réparation : suivi clients, tickets,
+                    affectation des techniciens et alertes. Le statut d'un ticket s'escalade tout seul
+                    selon son ancienneté (72h, puis 120h, puis urgent), avec des alertes qui se ferment
+                    et se rouvrent en conséquence. Une seule base de code Expo pour iOS, Android et web,
+                    branchée sur une API Django REST sécurisée en JWT.</p>
+                  <span class="idx-tags mono">Django REST · Expo · TypeScript · MariaDB</span>
+                </div>
+                <span class="idx-thumb is-fit"><img src="img/atelier-crm.png" alt="Atelier CRM" loading="lazy" /></span>
+                <span class="idx-cta mono">GitHub <span class="ln-i">↗</span></span>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="sec contact" id="contact">
+      <div class="wrap sec-grid">
+        <aside class="sec-aside">
+          <span class="sec-num">(05)</span>
+          <span class="sec-name mono">Contact</span>
+        </aside>
+        <div class="sec-main">
+          <h2 class="statement reveal">Travaillons ensemble.</h2>
+          <p class="prose reveal">
+            Je suis ouvert aux opportunités d'alternance, de stage et à toute collaboration.
+            Si mon profil correspond à ce que vous recherchez, écrivez-moi : je réponds rapidement.
+          </p>
+          <a href="mailto:lanllierarthur@gmail.com" class="mail reveal">lanllierarthur@gmail.com</a>
+          <div class="contact-row mono reveal">
+            <button id="copyEmail" type="button" data-email="lanllierarthur@gmail.com"><span class="copy-label">Copier
+                l'adresse</span></button>
+            <span class="cr-sep">/</span>
+            <a href="https://www.linkedin.com/in/arthur-lanllier-2b9389222/" target="_blank" rel="noopener">LinkedIn
+              ↗</a>
+            <span class="cr-sep">/</span>
+            <a href="https://github.com/Agarthaxx" target="_blank" rel="noopener">GitHub ↗</a>
+            <span class="cr-sep">/</span>
+            <a href="folder/Cv.pdf" target="_blank" rel="noopener">CV ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in mono">
+      <span>© <span id="year">2026</span> Arthur Lanllier</span>
+      <span class="foot-mid">Conçu &amp; codé à Caen</span>
+      <a href="#top">Haut de page ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (e) { }
+    });
+
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+    let open = false;
+    const setMenu = v => {
+      open = v;
+      burger.classList.toggle('is-open', v);
+      burger.setAttribute('aria-expanded', String(v));
+      menu.classList.toggle('is-open', v);
+      menu.setAttribute('aria-hidden', String(!v));
+      document.body.style.overflow = v ? 'hidden' : '';
+    };
+    burger.addEventListener('click', () => setMenu(!open));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && open) setMenu(false); });
+
+    const mast = document.getElementById('mast');
+    const progress = document.getElementById('progress');
+    const onScroll = () => {
+      const h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+      progress.style.transform = `scaleX(${max > 0 ? h.scrollTop / max : 0})`;
+      mast.classList.toggle('is-scrolled', h.scrollTop > 20);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length < 2) return;
+        const t = document.querySelector(id);
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); history.replaceState(null, '', id); }
+      });
+    });
+
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reveals = document.querySelectorAll('.reveal');
+    if (reduce) { reveals.forEach(el => el.classList.add('in')); }
+    else {
+      const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(el => io.observe(el));
+    }
+
+    const links = [...document.querySelectorAll('.mast-nav a')];
+    const targets = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    if (targets.length) {
+      const spy = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { const id = '#' + e.target.id; links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === id)); }
+      }), { rootMargin: '-45% 0px -50% 0px' });
+      targets.forEach(t => spy.observe(t));
+    }
+
+    const copyBtn = document.getElementById('copyEmail');
+    copyBtn.addEventListener('click', async () => {
+      const label = copyBtn.querySelector('.copy-label');
+      try {
+        await navigator.clipboard.writeText(copyBtn.dataset.email);
+        const prev = label.textContent; copyBtn.classList.add('copied'); label.textContent = 'Copié ✓';
+        setTimeout(() => { label.textContent = prev; copyBtn.classList.remove('copied'); }, 1600);
+      } catch (e) { window.location.href = 'mailto:' + copyBtn.dataset.email; }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
