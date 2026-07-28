@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f2eee4"/>
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#16150f" stroke-opacity="0.16"/>
+
+  <!-- top row -->
+  <text x="72" y="108" font-family="'JetBrains Mono', monospace" font-size="21" letter-spacing="1.5" fill="#706b5a">PORTFOLIO — DÉVELOPPEUR FULL-STACK</text>
+  <text x="1128" y="108" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="21" letter-spacing="1.5" fill="#706b5a">CAEN · FR</text>
+  <line x1="72" y1="132" x2="1128" y2="132" stroke="#16150f" stroke-opacity="0.16"/>
+
+  <!-- name -->
+  <text x="66" y="330" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="168" letter-spacing="-6" fill="#16150f">Arthur</text>
+  <text x="66" y="482" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="168" letter-spacing="-6" fill="#e8402a">Lanllier<tspan fill="#16150f">.</tspan></text>
+
+  <!-- bottom row -->
+  <line x1="72" y1="536" x2="1128" y2="536" stroke="#16150f" stroke-opacity="0.16"/>
+  <text x="72" y="576" font-family="'JetBrains Mono', monospace" font-size="22" letter-spacing="1" fill="#46443a">React · TypeScript · Django · Python · Docker</text>
+  <text x="1128" y="576" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="22" letter-spacing="1" fill="#e8402a">✳ en alternance · XEFI</text>
+</svg>
