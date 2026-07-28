@@ -189,7 +189,7 @@ strong { font-weight: 600; }
 .byline > div:last-child { border-right: none; margin-right: 0; }
 .byline dt { font-size: .7rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: .35rem; }
 .byline dd { font-size: .98rem; font-weight: 500; display: inline-flex; align-items: center; gap: .5rem; }
-.live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.hl { color: var(--accent); }
 
 .hero-lede {
   margin-top: clamp(2rem, 4vw, 3rem); max-width: 34ch;
@@ -390,7 +390,7 @@ strong { font-weight: 600; }
 .portrait.no-img .portrait-ph { display: grid; }
 
 @media (max-width: 620px) {
-  .portrait { width: 42%; margin: 0 0 1rem 1.2rem; }
+  .portrait { float: none; width: 60%; margin: 0 auto 1.4rem; }
 }
 
 /* PRINT — "Save as PDF" becomes a clean one-page CV */
@@ -470,7 +470,7 @@ strong { font-weight: 600; }
   .ln { font-size: .75rem; }
 
   /* --- à propos --- */
-  .portrait { width: 46%; margin: .2rem 0 .9rem 1rem; }
+  .portrait { width: 52%; }
   .portrait figcaption { font-size: .62rem; }
   .prose p { font-size: 1rem; line-height: 1.7; }
   .specs > div { grid-template-columns: 1fr; gap: .2rem; padding: .8rem 0; }
@@ -501,7 +501,6 @@ strong { font-weight: 600; }
   .mast-ic { display: none; }         
   .mast-brand { font-size: .88rem; }
   .hero-name { font-size: clamp(2.3rem, 11vw, 3.2rem); }
-  .portrait { float: none; width: 60%; margin: 0 0 1.2rem; }
   .statement { font-size: clamp(1.75rem, 8vw, 2.2rem); }
   .stack-row dd { font-size: 1.2rem; }
   .cv-role { font-size: 1.2rem; }
