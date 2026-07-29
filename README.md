@@ -1,8 +1,8 @@
 <img src="img/readme-banner.svg" alt="Arthur Lanllier — Développeur Full-Stack" width="100%" />
 
-# Portfolio
+# Portfolio_
 
-Salut ! 👋 C'est mon portfolio personnel — un site tout simple en **HTML / CSS / JS**, sans framework, pour me présenter et montrer ce que je construis.
+Salut ! 👋 C'est mon portfolio personnel, un site tout simple en **HTML / CSS / JS**, sans framework, pour me présenter et montrer ce que je construis.
 
 On y trouve :
 - un petit mot sur mon parcours (de la filière littéraire au développement web),
@@ -12,11 +12,12 @@ On y trouve :
 
 ## Voir le site
 
-Ouvre simplement `index.html` dans ton navigateur, aucune installation n'est nécessaire.
+Voici le lien de mon portfolio : https://agarthaxx.github.io/portfolio/
+Ou alors ouvre simplement `index.html` dans ton navigateur, aucune installation n'est nécessaire.
 
 ## Fait avec
 
-HTML · CSS · JS — pas de build, pas de dépendances, juste du code écrit à la main.
+HTML · CSS · JS pas de build, pas de dépendances, juste du code écrit à la main.
 
 ---
 
