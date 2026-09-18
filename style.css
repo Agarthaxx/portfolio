@@ -288,14 +288,17 @@ strong { font-weight: 600; }
 }
 /* visuels de README (bannière / maquettes) : on montre l'image entière
    plutôt que de la rogner */
-.idx-thumb.is-fit img { object-fit: contain; }
+    
+.idx-thumb.is-fit img { object-fit: contain; } 
 
 .idx-cta { color: var(--ink); white-space: nowrap; display: inline-flex; align-items: center; gap: .4rem; transition: color .2s; }
 .idx-cta .ln-i { transition: transform .2s; }
 
 .idx:hover .idx-title { color: var(--accent); transform: translateX(6px); }
+/* Suppression du zoom sur les image au survol du curseur 
 .idx:hover .idx-thumb { border-color: var(--rule-strong); box-shadow: 0 12px 28px var(--shadow); }
 .idx:hover .idx-thumb img { transform: scale(1.09); }
+*/ 
 .idx:hover .idx-cta { color: var(--accent); }
 .idx:hover .idx-cta .ln-i { transform: translate(2px, -2px); }
 
@@ -512,4 +515,38 @@ strong { font-weight: 600; }
   .sec { padding: 3rem 0; }
   .mobile-menu { justify-content: flex-start; padding-top: 4.5rem; overflow-y: auto; }
   .mobile-links a { font-size: 1.5rem; padding: .6rem 0; }
+}
+
+/* BANDEAU DEROULANT */
+.marquee {
+  overflow: hidden; padding: 32px 0;
+  border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee__track {
+  display: flex; width: max-content; gap: 64px;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee__item {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  font-size: 12px; font-family: 'JetBrains Mono', monospace; white-space: nowrap; color: currentColor;
+}
+
+.marquee__item__icon {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.marquee__item__icon img,
+.marquee__item__icon svg {
+  max-width: 100%; max-height: 100%;
+  width: auto; height: auto;
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }

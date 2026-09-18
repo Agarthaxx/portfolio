@@ -13,11 +13,10 @@ On y trouve :
 ## Voir le site
 
 Voici le lien de mon portfolio : https://agarthaxx.github.io/portfolio/
-Ou alors ouvre simplement `index.html` dans ton navigateur, aucune installation n'est nécessaire.
 
 ## Fait avec
 
-HTML · CSS · JS pas de build, pas de dépendances, juste du code écrit à la main.
+HTML · CSS · JS pas de build, pas de dépendance, juste du code écrit à la main.
 
 ---
 
